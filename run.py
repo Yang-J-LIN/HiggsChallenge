@@ -38,8 +38,6 @@ class HiggsDataset():
     def __init__(self, dataset_dir):
         y, X, ids = load_csv_data(dataset_dir)
 
-        y, X, ids = y[0:100], X[0:100], ids[0:100]
-
         y = (y == 1).astype(int)
 
         self.PRI_jet_nums = np.unique(X[:, 22])
